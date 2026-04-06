@@ -786,7 +786,7 @@ Notes:
 
 ## TurtleBot3 Waffle Pi Example
 
-The following example is a clean TurtleBot3 Waffle Pi exploration profile derived from a real Nav2 integration, with unrelated application-specific launch details removed.
+The following example is a clean TurtleBot3 Waffle Pi exploration profile derived from a real Nav2 integration.
 
 ### Example Parameter File
 
@@ -843,12 +843,6 @@ frontier_explorer:
     completion_event_enabled: true
     completion_event_topic: exploration_complete
 ```
-
-For tighter or shorter-range exploration tasks, a smaller `frontier_suppression_base_size_m` can be useful.
-
-For more aggressive suppression, lower `frontier_suppression_attempt_threshold` and lower `frontier_suppression_progress_epsilon_m` can be appropriate.
-
-If `all_frontiers_suppressed_behavior=return_to_start`, the robot can wait at the recorded start pose while suppressed frontier areas age out or while new frontiers appear.
 
 ### Example Launch
 
