@@ -51,6 +51,8 @@ The package is based on the WFD idea described in the paper "Frontier Based Expl
 - optional return-to-start behavior after frontier exhaustion
 - reusable C++ library export for custom integration paths
 
+<p align="right"><a href="#frontier_exploration_ros2">back to top</a></p>
+
 ## Design Goals
 
 - Provide a C++ exploration package that is fast, predictable, and easy to integrate into ROS 2 Jazzy systems.
@@ -58,6 +60,8 @@ The package is based on the WFD idea described in the paper "Frontier Based Expl
 - Expose a clean parameter surface for topics, frames, QoS, goal behavior, and completion hooks.
 - Make namespace-aware deployment and multi-robot integration practical.
 - Keep the package public and universal. The package should be usable without assuming a specific robot, simulator, map saver, or private stack.
+
+<p align="right"><a href="#frontier_exploration_ros2">back to top</a></p>
 
 ## Status
 
@@ -73,6 +77,8 @@ Even though the deliverable is a ROS 2 package, the implementation encourages re
 - QoS and topic contracts are explicit instead of being buried in code
 
 In practice, that makes the package easier to reuse in custom ROS 2 stacks and lowers the cost of adapting the core ideas to non-ROS runtimes in later work.
+
+<p align="right"><a href="#frontier_exploration_ros2">back to top</a></p>
 
 ## Verified Environment
 
@@ -99,6 +105,8 @@ The TurtleBot3 Waffle Pi is also a relatively small and slow robot, so parameter
 
 > Note: This demo uses intentionally aggressive preemption settings to speed up the exploration flow. For real testing, less aggressive tuning is recommended.
 
+<p align="right"><a href="#frontier_exploration_ros2">back to top</a></p>
+
 ## Architecture
 
 The package ships with four main pieces:
@@ -119,6 +127,8 @@ At runtime, the node expects:
 The package can also publish a completion event through `std_msgs/msg/Empty`. This is intentionally optional and transport-light. The explorer only reports completion. Any map export, mission chaining, docking, or higher-level orchestration should be implemented outside the package.
 
 When suppression is enabled, the core also tracks repeated failed frontier attempts, maintains temporary square suppression regions, evaluates no-progress timeouts from action feedback, and can optionally send a temporary return-to-start goal while all currently detected frontiers remain suppressed. That temporary return path is separate from normal exploration completion.
+
+<p align="right"><a href="#frontier_exploration_ros2">back to top</a></p>
 
 ## Algorithm and Mathematics
 
@@ -392,6 +402,8 @@ This temporary return-to-start path is not the same as `return_to_start_on_compl
 
 If frontiers become available again while the robot is moving under this temporary return goal, the explorer cancels that return goal and resumes frontier exploration.
 
+<p align="right"><a href="#frontier_exploration_ros2">back to top</a></p>
+
 ## Why This Package Is Different
 
 - It targets ROS 2 Jazzy directly instead of being a legacy ROS 1 port with minimal adaptation.
@@ -406,6 +418,8 @@ If frontiers become available again while the robot is moving under this tempora
 - It includes settle logic and stable replacement checks to reduce unnecessary replanning.
 - It keeps completion handling external and generic instead of coupling the package to project-specific post-processing.
 - It enables IPO/LTO in `Release` and `RelWithDebInfo` builds when supported by the toolchain.
+
+<p align="right"><a href="#frontier_exploration_ros2">back to top</a></p>
 
 ## Installation and Build
 
@@ -445,6 +459,8 @@ source /opt/ros/jazzy/setup.bash
 colcon build --packages-select frontier_exploration_ros2
 source install/setup.bash
 ```
+
+<p align="right"><a href="#frontier_exploration_ros2">back to top</a></p>
 
 ## Quick Start
 
@@ -489,6 +505,8 @@ ros2 launch frontier_exploration_ros2 frontier_explorer.launch.py \
   map_qos_autodetect_on_startup:=true \
   map_qos_autodetect_timeout_s:=2.0
 ```
+
+<p align="right"><a href="#frontier_exploration_ros2">back to top</a></p>
 
 ## Integration Guide
 
@@ -607,6 +625,8 @@ In those cases, suppression provides three operational protections:
 
 If the frontier set changes and a usable candidate appears again, the temporary return-to-start goal is canceled and frontier exploration resumes automatically.
 
+<p align="right"><a href="#frontier_exploration_ros2">back to top</a></p>
+
 ## QoS Configuration
 
 ### Supported User-Facing Tokens
@@ -677,6 +697,8 @@ Suppression does not define its own QoS policy, but it is still relevant during 
 2. use startup grace while validating navigation bring-up timing
 3. then tune suppression thresholds only after the transport layer is stable
 
+<p align="right"><a href="#frontier_exploration_ros2">back to top</a></p>
+
 ## Launch File Reference
 
 Launch file: `launch/frontier_explorer.launch.py`
@@ -698,6 +720,8 @@ Notes:
 - the launch file only overrides the four QoS-related parameters listed above, plus `use_sim_time`
 - all other node behavior is defined by the selected parameter file
 - suppression behavior, startup grace, and suppressed-frontier waiting policy are configured in YAML, not through dedicated launch arguments
+
+<p align="right"><a href="#frontier_exploration_ros2">back to top</a></p>
 
 ## Parameter Reference
 
@@ -783,6 +807,8 @@ Notes:
 - `return_to_start_on_complete` only applies after frontier exhaustion.
 - `all_frontiers_suppressed_behavior=return_to_start` only applies to the temporary suppressed-frontier state.
 - a temporary suppressed return-to-start does not publish a completion event and does not mean mission completion.
+
+<p align="right"><a href="#frontier_exploration_ros2">back to top</a></p>
 
 ## TurtleBot3 Waffle Pi Example
 
@@ -874,6 +900,8 @@ ros2 launch frontier_exploration_ros2 frontier_explorer.launch.py \
 - the robot can receive and complete Nav2 goals before exploration is started
 - the completion event topic is subscribed by an external consumer if post-processing is needed
 
+<p align="right"><a href="#frontier_exploration_ros2">back to top</a></p>
+
 ## Testing
 
 Run package tests with:
@@ -894,6 +922,8 @@ Current test coverage includes:
 - preemption and cancelation flow
 - frontier suppression, no-progress timeout, startup grace, and temporary return-to-start behavior
 - QoS parsing and startup autodetect behavior
+
+<p align="right"><a href="#frontier_exploration_ros2">back to top</a></p>
 
 ## Contributing
 
@@ -970,11 +1000,17 @@ Then open a pull request with:
 - [ ] no project-specific references were introduced
 - [ ] QoS and integration behavior are clearly documented
 
+<p align="right"><a href="#frontier_exploration_ros2">back to top</a></p>
+
 ## License
 
 This project is released under the Apache-2.0 License. See [LICENSE](https://github.com/mertgulerx/frontier-exploration-ros2/blob/main/LICENSE).
+
+<p align="right"><a href="#frontier_exploration_ros2">back to top</a></p>
 
 ## Maintainer
 
 Maintainer: `mertgulerx`  
 Support Email: `support.mertgulerx@gmail.com`
+
+<p align="right"><a href="#frontier_exploration_ros2">back to top</a></p>
