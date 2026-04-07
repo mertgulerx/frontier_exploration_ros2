@@ -17,12 +17,13 @@ This is not just a direct C++ port. It also includes impressive performance impr
 ## Table of Contents
 
 - [Overview](#overview)
-- [Design Goals](#design-goals)
 - [Status](#status)
 - [Verified Environment](#verified-environment)
+- [Version History](#version-history)
+- [Why This Package Is Different](#why-this-package-is-different)
+- [Design Goals](#design-goals)
 - [Architecture](#architecture)
 - [Algorithm and Mathematics](#algorithm-and-mathematics)
-- [Why This Package Is Different](#why-this-package-is-different)
 - [Installation and Build](#installation-and-build)
 - [Quick Start](#quick-start)
 - [Integration Guide](#integration-guide)
@@ -53,16 +54,6 @@ The package is based on the WFD idea described in the paper "Frontier Based Expl
 
 <p align="right"><a href="#frontier_exploration_ros2">back to top</a></p>
 
-## Design Goals
-
-- Provide a C++ exploration package that is fast, predictable, and easy to integrate into ROS 2 Jazzy systems.
-- Stay Nav2-first at the node boundary while keeping the decision logic separated from project-specific backends.
-- Expose a clean parameter surface for topics, frames, QoS, goal behavior, and completion hooks.
-- Make namespace-aware deployment and multi-robot integration practical.
-- Keep the package public and universal. The package should be usable without assuming a specific robot, simulator, map saver, or private stack.
-
-<p align="right"><a href="#frontier_exploration_ros2">back to top</a></p>
-
 ## Status
 
 This package is written and tested for ROS 2 Jazzy.
@@ -77,15 +68,6 @@ Even though the deliverable is a ROS 2 package, the implementation encourages re
 - QoS and topic contracts are explicit instead of being buried in code
 
 In practice, that makes the package easier to reuse in custom ROS 2 stacks and lowers the cost of adapting the core ideas to non-ROS runtimes in later work.
-
-<p align="right"><a href="#frontier_exploration_ros2">back to top</a></p>
-
-## Version History
-
-| Version  | Summary                                                                              |
-| -------- | ------------------------------------------------------------------------------------ |
-| `v1.0.0` | First release                                                                        |
-| `v1.1.0` | Added gain-gated preemption to reduce path complexity and optimize traveled distance |
 
 <p align="right"><a href="#frontier_exploration_ros2">back to top</a></p>
 
@@ -122,6 +104,15 @@ The TurtleBot3 Waffle Pi is also a relatively small and slow robot, so parameter
 
 <p align="right"><a href="#frontier_exploration_ros2">back to top</a></p>
 
+## Version History
+
+| Version  | Summary                                                                              |
+| -------- | ------------------------------------------------------------------------------------ |
+| `v1.0.0` | First release                                                                        |
+| `v1.1.0` | Added gain-gated preemption to reduce path complexity and optimize traveled distance |
+
+<p align="right"><a href="#frontier_exploration_ros2">back to top</a></p>
+
 ## Why This Package Is Different
 
 - It targets ROS 2 Jazzy directly instead of being a legacy ROS 1 port with minimal adaptation.
@@ -134,6 +125,16 @@ The TurtleBot3 Waffle Pi is also a relatively small and slow robot, so parameter
 - It supports both point/snapshot-based and target-pose visible-gain-gated revealed preemption.
 - It keeps completion handling external and generic instead of coupling the package to project-specific post-processing.
 - It enables IPO/LTO in `Release` and `RelWithDebInfo` builds when supported by the toolchain.
+
+<p align="right"><a href="#frontier_exploration_ros2">back to top</a></p>
+
+## Design Goals
+
+- Provide a C++ exploration package that is fast, predictable, and easy to integrate into ROS 2 Jazzy systems.
+- Stay Nav2-first at the node boundary while keeping the decision logic separated from project-specific backends.
+- Expose a clean parameter surface for topics, frames, QoS, goal behavior, and completion hooks.
+- Make namespace-aware deployment and multi-robot integration practical.
+- Keep the package public and universal. The package should be usable without assuming a specific robot, simulator, map saver, or private stack.
 
 <p align="right"><a href="#frontier_exploration_ros2">back to top</a></p>
 
