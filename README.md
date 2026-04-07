@@ -1,9 +1,10 @@
 # frontier_exploration_ros2
 
-[![Contributors](https://img.shields.io/github/contributors/mertgulerx/frontier-exploration-ros2?style=flat-square)](https://github.com/mertgulerx/frontier-exploration-ros2/graphs/contributors)
-[![Stars](https://img.shields.io/github/stars/mertgulerx/frontier-exploration-ros2?style=flat-square)](https://github.com/mertgulerx/frontier-exploration-ros2/stargazers)
-[![Issues](https://img.shields.io/github/issues/mertgulerx/frontier-exploration-ros2?style=flat-square)](https://github.com/mertgulerx/frontier-exploration-ros2/issues)
-[![License](https://img.shields.io/github/license/mertgulerx/frontier-exploration-ros2?style=flat-square)](https://github.com/mertgulerx/frontier-exploration-ros2/blob/main/LICENSE)
+[![Contributors](https://img.shields.io/github/contributors/mertgulerx/frontier-exploration-ros2?style=for-the-badge)](https://github.com/mertgulerx/frontier-exploration-ros2/graphs/contributors)
+[![Stars](https://img.shields.io/github/stars/mertgulerx/frontier-exploration-ros2?style=for-the-badge)](https://github.com/mertgulerx/frontier-exploration-ros2/stargazers)
+[![Issues](https://img.shields.io/github/issues/mertgulerx/frontier-exploration-ros2?style=for-the-badge)](https://github.com/mertgulerx/frontier-exploration-ros2/issues)
+[![License](https://img.shields.io/github/license/mertgulerx/frontier-exploration-ros2?style=for-the-badge)](https://github.com/mertgulerx/frontier-exploration-ros2/blob/main/LICENSE)
+
 
 `frontier_exploration_ros2` is a modern C++ frontier exploration package for ROS 2 Jazzy and Nav2. It implements a Wavefront Frontier Detector (WFD) style exploration pipeline, exposes a ready-to-run `frontier_explorer` node, and ships a reusable C++ core library for teams that need tighter control over integration.
 
