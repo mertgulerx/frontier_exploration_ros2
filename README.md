@@ -11,6 +11,8 @@ The package is written for ROS 2 Jazzy, but it is intentionally structured to ke
 
 In internal comparisons against Python-based frontier exploration packages under similar workloads, the C++ implementation has typically shown about 40% lower runtime overhead.
 
+This is not just a direct C++ port. It also includes impressive performance improvements, such as reusable caches, less repeated computations, and controlled memory usage for long-running explorations. With extra features such as preemption to improve overall effectiveness for autonomous mobile robots. 
+
 ## Table of Contents
 
 - [Overview](#overview)
