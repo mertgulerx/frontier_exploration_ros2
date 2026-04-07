@@ -118,7 +118,7 @@ The TurtleBot3 Waffle Pi is also a relatively small and slow robot, so parameter
 ![Frontier exploration demo with gain-gate preemption on a TurtleBot3 Waffle Pi](https://github.com/mertgulerx/readme-assets/blob/main/frontier-exploration/mertgulerx-frontier-exploration-gain-gate-preemption-example-on-a-turtlebot3-waffle-pi.gif)
 
 > [!TIP]
-> This demo utilizes a smart **gain-gate preemption** method to reduce path & maneuver complexity and efficiency (Introduced in v1.1.0)
+> This demo utilizes a smart **gain-gate preemption** method to reduce path & maneuver complexity and improve efficiency (Introduced in v1.1.0)
 
 <p align="right"><a href="#frontier_exploration_ros2">back to top</a></p>
 
