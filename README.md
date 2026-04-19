@@ -18,6 +18,7 @@ In benchmarks against a Python-based frontier exploration package, our MRTSP mod
 ## Table of Contents
 
 - [Overview](#overview)
+- [Flowchart Diagram](#flowchart-diagram)
 - [Performance Comparison](#performance-comparison)
 - [Results](#results)
 - [Research Basis](#research-basis)
@@ -56,6 +57,8 @@ The implementation keeps the WFD-style frontier extraction backbone and extends 
 - optional completion-event publishing for external orchestration
 - optional return-to-start behavior after frontier exhaustion
 - reusable C++ library export for custom integration paths
+
+## Flowchart Diagram
 
 ```
            +-------------------------+
@@ -117,6 +120,8 @@ The implementation keeps the WFD-style frontier extraction backbone and extends 
 ```
 
 ![Diagram](https://github.com/mertgulerx/readme-assets/blob/main/frontier-exploration/frontier-exploration-ros2-diagram.png)
+
+<p align="right"><a href="#frontier_exploration_ros2">back to top</a></p>
 
 ## Performance Comparison
 
