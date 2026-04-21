@@ -226,7 +226,7 @@ This is especially effective in corridor-like maps, where narrow leftover fragme
 <table width="30%" align="left">
   <tr>
     <td align="center">
-      <img src="https://raw.githubusercontent.com/mertgulerx/readme-assets/main/frontier-exploration/corridor-mrtsp-preemption-aggressive.png" alt="Corridor MRTSP Aggressive result" width="80%" />
+      <img src="https://raw.githubusercontent.com/mertgulerx/readme-assets/main/frontier-exploration/corridor-mrtsp-preemption-aggressive.png" alt="Corridor MRTSP Aggressive result" width="60%" />
     </td>
   </tr>
   <tr>
