@@ -29,14 +29,16 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Refresh apt index
-        run: apt-get update
+      - name: Install system dependencies
+        run: |
+          apt-get update
+          apt-get install -y qtbase5-dev
 
       - name: Install package dependencies
         run: |
           rosdep update
           rosdep install \
-            --from-paths . \
+            --from-paths . frontier_exploration_ros2_rviz \
             --ignore-src \
             --rosdistro "$ROS_DISTRO" \
             -r \
