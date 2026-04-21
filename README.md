@@ -132,12 +132,12 @@ Exploration parameters can be strongly affected by LiDAR characteristics, so the
 
 The TurtleBot3 Waffle Pi is also a relatively small and slow robot, so parameter values may need to change on faster platforms.
 
-![Frontier exploration demo with visible-reveal-gain preemption on a TurtleBot3 Waffle Pi](https://raw.githubusercontent.com/mertgulerx/readme-assets/main/frontier-exploration/mertgulerx-frontier-exploration-gain-gate-preemption-example-on-a-turtlebot3-waffle-pi.gif)
+<img src="https://raw.githubusercontent.com/mertgulerx/readme-assets/main/frontier-exploration/mertgulerx-frontier-exploration-gain-gate-preemption-example-on-a-turtlebot3-waffle-pi.gif" alt="Frontier exploration demo with visible-reveal-gain preemption on a TurtleBot3 Waffle Pi" width="70%" />
 
 > [!TIP]
 > This demo uses `nearest frontier selection` and `visible-reveal-gain-based preemption` to reduce unnecessary path complexity and keep exploration responsive in cluttered environments.
 
-![Frontier exploration demo with MRTSP, map optimization, and preemption on a TurtleBot3 Waffle Pi](https://raw.githubusercontent.com/mertgulerx/readme-assets/main/frontier-exploration/mertgulerx-frontier-exploration-mrtsp.gif)
+<img src="https://raw.githubusercontent.com/mertgulerx/readme-assets/main/frontier-exploration/mertgulerx-frontier-exploration-mrtsp.gif" alt="Frontier exploration demo with MRTSP, map optimization, and preemption on a TurtleBot3 Waffle Pi" width="70%" />
 
 > [!TIP]
 > This demo uses `MRTSP + Map Optimization + Preemption` to achieve highly efficient, smart autonomous exploration with smoother and more purposeful navigation decisions.
