@@ -278,7 +278,7 @@ This is especially effective in corridor-like maps, where narrow leftover fragme
 |             v                   v
 |  +---------------------+   +---------------------------+
 |  | Select Closest      |   | Compute MRTSP Cost Matrix |
-|  | Reachable Frontier  |   | & Greedy Ordering         |
+|  | Reachable Frontier  |   |                           |
 |  +---------------------+   +---------------------------+
 |             \                     /
 |              \                   /
@@ -522,8 +522,6 @@ t_lb(j) = min(
   |delta_yaw(robot, V_j)| / max_angular_speed_wmax
 )
 ```
-
-This package uses a greedy traversal over that MRTSP-style matrix. It is therefore a practical ROS 2 implementation of the paper's decision model, not an exhaustive MRTSP solver.
 
 Three implementation details matter in practice:
 
