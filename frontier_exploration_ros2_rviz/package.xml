@@ -9,6 +9,7 @@
 
   <buildtool_depend>ament_cmake</buildtool_depend>
 
+  <build_depend>qtbase5-dev</build_depend>
   <depend>frontier_exploration_ros2</depend>
   <depend>pluginlib</depend>
   <depend>rcl_interfaces</depend>
