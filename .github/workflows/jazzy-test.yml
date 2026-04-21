@@ -27,7 +27,7 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Install system dependencies
         run: |
@@ -38,7 +38,7 @@ jobs:
         run: |
           rosdep update
           rosdep install \
-            --from-paths . frontier_exploration_ros2_rviz \
+            --from-paths . plugin/frontier_exploration_ros2_rviz \
             --ignore-src \
             --rosdistro "$ROS_DISTRO" \
             -r \
@@ -57,7 +57,7 @@ jobs:
           source install/setup.bash
           colcon build \
             --event-handlers console_direct+ \
-            --base-paths . frontier_exploration_ros2_rviz \
+            --base-paths . plugin/frontier_exploration_ros2_rviz \
             --build-base build-all \
             --install-base install \
             --test-result-base test-results \
@@ -84,7 +84,7 @@ jobs:
           colcon test \
             --event-handlers console_direct+ \
             --return-code-on-test-failure \
-            --base-paths . frontier_exploration_ros2_rviz \
+            --base-paths . plugin/frontier_exploration_ros2_rviz \
             --build-base build-all \
             --install-base install \
             --test-result-base test-results \
@@ -100,7 +100,7 @@ jobs:
 
       - name: Upload test results
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: jazzy-test-results
           path: |

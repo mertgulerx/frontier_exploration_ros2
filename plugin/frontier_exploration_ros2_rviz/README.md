@@ -23,14 +23,14 @@ out of the default `colcon build` scan for a typical ROS 2 workspace `src` tree.
 the RViz plugin optional by default.
 
 Build the core package first in the normal workspace flow, then build the RViz plugin
-explicitly from its nested base path:
+explicitly from its nested `plugin/` base path:
 
 ```bash
 source /opt/ros/jazzy/setup.bash
 cd ~/your_ros2_ws
 colcon build --packages-select frontier_exploration_ros2
 colcon build \
-  --base-paths src/frontier_exploration_ros2/frontier_exploration_ros2_rviz \
+  --base-paths src/frontier_exploration_ros2/plugin/frontier_exploration_ros2_rviz \
   --cmake-args -DPython3_EXECUTABLE=/usr/bin/python3
 source install/setup.bash
 ros2 launch frontier_exploration_ros2_rviz rviz_with_frontier_panel.launch.py
@@ -44,6 +44,6 @@ You can also open any RViz session and add the panel manually:
 ## Notes
 
 - The panel stays optional. `frontier_exploration_ros2` can still be built and used without launching RViz.
-- A plain `colcon build` in your workspace root will not pick up this nested package unless you add its base path explicitly.
+- A plain `colcon build` in your workspace root will not pick up this nested package unless you add its `plugin/frontier_exploration_ros2_rviz` base path explicitly.
 - Exact scheduled state tracking is guaranteed only for commands initiated from the panel itself.
 - External delayed control requests are shown through observed runtime state and matching log events.
