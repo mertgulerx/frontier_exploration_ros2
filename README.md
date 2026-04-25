@@ -19,6 +19,19 @@ It also improves long-running exploration with reusable caches, less repeated co
 
 In benchmarks against a Python-based frontier exploration package, our MRTSP mode delivered `72.2%` lower average CPU usage and `48.5%` lower average RAM usage. Our nearest mode reached `79.4%` lower average CPU usage and about `76.5%` lower average RAM usage.
 
+Philosophy:
+
+```
+Simple Core.
+Clean interfaces.
+Optional parameters.
+Fast target selection.
+No overloaded responsibilities.
+Nav2 does navigation.
+SLAM does mapping.
+Explorer does exploration.
+```
+
 ## Table of Contents
 
 - [Overview](#overview)
@@ -246,19 +259,6 @@ The demo repository provides a simulation environment and playground for tuning 
 Docker support is included for easier setup and reproducible testing.
 
 ## Design Goals
-
-Philosophy:
-
-```
-Simple Core.
-Clean interfaces.
-Optional parameters.
-Fast target selection.
-No overloaded responsibilities.
-Nav2 does navigation.
-SLAM does mapping.
-Explorer does exploration.
-```
 
 - Provide a C++ exploration package that is fast, predictable, and easy to integrate into real robotics systems, with a verified ROS 2 Jazzy path.
 - Keep WFD-style frontier extraction while improving frontier quality and exploration ordering through pre-WFD map optimization and MRTSP-based selection.
