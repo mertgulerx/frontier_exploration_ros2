@@ -302,8 +302,9 @@ For MRTSP ordering, **Dynamic Programming** is a game-changing feature. It great
 
 | Algorithm           | Distance Traveled (m) | Time Elapsed (mm:ss) | Time Elapsed (s) |
 | ------------------- | --------------------- | -------------------- | ---------------- |
-| Greedy MRTSP        | 273.52                | 08:19                | 499              |
 | Dynamic Programming | 263.72                | 07:22                | 442              |
+| Greedy MRTSP        | 273.52                | 08:19                | 499              |
+| m_explore_ros2 | 338.61                | 09:47                | 587              |
 
 <p align="right"><a href="#frontier_exploration_ros2">back to top</a></p>
 
