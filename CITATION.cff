@@ -1,0 +1,69 @@
+cff-version: 1.2.0
+message: >-
+  If you use frontier_exploration_ros2 in your research, please cite
+  this software using the metadata below and specify the version
+  or commit used.
+type: software
+
+title: >-
+  frontier_exploration_ros2: An Integrated Framework for Efficient
+  Autonomous Exploration in Unknown Environments
+
+authors:
+  - family-names: "Güler"
+    given-names: "Mert"
+    affiliation: "Yıldız Technical University"
+    orcid: "https://orcid.org/0009-0006-6709-7179"
+  - family-names: "Uslu"
+    given-names: "Erkan"
+    affiliation: "Yıldız Technical University"
+    orcid: "https://orcid.org/0000-0002-6971-981X"
+
+version: "1.6.2"
+license: Apache-2.0
+repository-code: "https://github.com/mertgulerx/frontier_exploration_ros2"
+url: "https://github.com/mertgulerx/frontier_exploration_ros2"
+
+abstract: >-
+  Efficient autonomous exploration requires robots to select informative
+  destinations while adapting their decisions to an evolving map.
+  Short-sighted frontier selection and continued navigation toward
+  targets whose information value has diminished can result in
+  unnecessary travel. We present frontier_exploration_ros2, an integrated
+  framework for mobile robot exploration that couples frontier sequence
+  planning with visibility-aware goal execution. The framework refines
+  occupancy grids before wavefront frontier extraction and evaluates
+  candidate transitions using a Minimum Ratio Traveling Salesman
+  Problem (MRTSP)-based cost model. A bounded-horizon dynamic programming
+  solver searches frontier sequences within a pruned candidate set,
+  executing only the first selected target before replanning as the
+  map evolves. During navigation, occlusion-aware ray casting estimates
+  the remaining unknown-space visibility from the target pose, allowing
+  goals with insufficient expected reveal to be preempted. Costmap
+  constraints and optional failure-memory-based frontier suppression
+  address blocked and repeatedly unsuccessful targets. Incremental
+  decision-map updates and reusable caches reduce redundant computation
+  throughout the exploration cycle. Simulation benchmarks in bookstore
+  and warehouse environments evaluate exploration time, travel distance,
+  and computational resource use against existing exploration packages.
+  In the reported warehouse comparison, the dynamic programming
+  configuration reduces travel distance by 22.1% and exploration time
+  by 24.7% relative to m_explore_ros2. The framework is released as
+  open-source software with a reusable C++ core and ROS 2 integration
+  to support reproducible evaluation and further research.
+
+keywords:
+  - autonomous exploration
+  - mobile robotics
+  - frontier-based exploration
+  - occupancy grid maps
+  - decision-map optimization
+  - wavefront frontier detection
+  - minimum ratio traveling salesman problem
+  - bounded-horizon dynamic programming
+  - candidate pruning
+  - ray casting
+  - visibility-aware preemption
+  - frontier suppression
+  - incremental map processing
+  - ROS 2
