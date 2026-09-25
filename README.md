@@ -8,6 +8,7 @@
 
 [![Build](https://img.shields.io/github/actions/workflow/status/mertgulerx/frontier-exploration-ros2/jazzy-build.yml?branch=main&style=for-the-badge&label=build)](https://github.com/mertgulerx/frontier-exploration-ros2/actions/workflows/jazzy-build.yml)
 [![Test](https://img.shields.io/github/actions/workflow/status/mertgulerx/frontier-exploration-ros2/jazzy-test.yml?branch=main&style=for-the-badge&label=test)](https://github.com/mertgulerx/frontier-exploration-ros2/actions/workflows/jazzy-test.yml)
+[![DOI](https://zenodo.org/badge/1203069374.svg)](https://doi.org/10.5281/zenodo.22964253)
 
 ### Contributors
 
@@ -42,7 +43,7 @@
 > here when available. In the meantime, please cite the software using
 > the citation information below.
 
-> Güler, M., & Uslu, E. (2026). frontier_exploration_ros2: An Integrated Framework for Efficient Autonomous Exploration in Unknown Environments (Version 1.6.2) [Computer software]. https://github.com/mertgulerx/frontier_exploration_ros2
+> Güler, M., & Uslu, E. (2026). frontier_exploration_ros2: An Integrated Framework for Efficient Autonomous Exploration in Unknown Environments [Computer software]. https://doi.org/10.5281/zenodo.22964253
 
 `frontier_exploration_ros2` is a powerful open-source autonomous exploration package built for modern mobile robots. It is fast, reliable, and designed to make autonomous exploration feel practical, polished, and ready for real-world use.
 
@@ -134,8 +135,16 @@ Citation metadata is available in [CITATION.cff](CITATION.cff).
 You can also use GitHub's **Cite this repository** feature to obtain
 a formatted citation.
 
+General:
+
 ```text
-Güler, M., & Uslu, E. (2026). frontier_exploration_ros2: An Integrated Framework for Efficient Autonomous Exploration in Unknown Environments (Version 1.6.2) [Computer software]. https://github.com/mertgulerx/frontier_exploration_ros2
+> Güler, M., & Uslu, E. (2026). frontier_exploration_ros2: An Integrated Framework for Efficient Autonomous Exploration in Unknown Environments [Computer software]. https://doi.org/10.5281/zenodo.22964253
+```
+
+Specific Version:
+
+```text
+Güler, M., & Uslu, E. (2026). frontier_exploration_ros2: An Integrated Framework for Efficient Autonomous Exploration in Unknown Environments (Version 1.6.2) [Computer software]. https://doi.org/10.5281/zenodo.22964254
 ```
 
 ## Research Basis

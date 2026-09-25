@@ -20,6 +20,15 @@ authors:
     orcid: "https://orcid.org/0000-0002-6971-981X"
 
 version: "1.6.2"
+
+identifiers:
+  - description: "DOI for all versions of frontier_exploration_ros2"
+    type: doi
+    value: "10.5281/zenodo.22964253"
+  - description: "DOI for version 1.6.2 of frontier_exploration_ros2"
+    type: doi
+    value: "10.5281/zenodo.22964254"
+
 license: Apache-2.0
 repository-code: "https://github.com/mertgulerx/frontier_exploration_ros2"
 url: "https://github.com/mertgulerx/frontier_exploration_ros2"
