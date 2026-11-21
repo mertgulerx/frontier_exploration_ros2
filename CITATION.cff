@@ -14,10 +14,6 @@ authors:
     given-names: "Mert"
     affiliation: "Yıldız Technical University"
     orcid: "https://orcid.org/0009-0006-6709-7179"
-  - family-names: "Uslu"
-    given-names: "Erkan"
-    affiliation: "Yıldız Technical University"
-    orcid: "https://orcid.org/0000-0002-6971-981X"
 
 version: "1.6.2"
 doi: "10.5281/zenodo.22964254"

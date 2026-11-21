@@ -64,12 +64,21 @@
 > [!NOTE]
 > **Academic publication in preparation**
 >
-> Mert Güler and Erkan Uslu are preparing a research paper describing
-> this framework and its evaluation. Publication details will be added
-> here when available. In the meantime, please cite the software using
-> the citation information below.
+> We are preparing a research paper describing this framework and its
+> evaluation. Publication details will be added here when available. In
+> the meantime, please cite the software using the citation information
+> below.
 
-> Güler, M., & Uslu, E. (2026). frontier_exploration_ros2: An Integrated Framework for Efficient Autonomous Exploration in Unknown Environments [Computer software]. https://doi.org/10.5281/zenodo.22964253
+```bibtex
+@software{guler2026frontier,
+  author    = {G{\"u}ler, Mert},
+  title     = {frontier\_exploration\_ros2: An Integrated Framework for Efficient Autonomous Exploration in Unknown Environments},
+  year      = {2026},
+  publisher = {Zenodo},
+  doi       = {10.5281/zenodo.22964253},
+  url       = {https://doi.org/10.5281/zenodo.22964253}
+}
+```
 
 `frontier_exploration_ros2` is a powerful open-source autonomous exploration package built for modern mobile robots. It is fast, reliable, and designed to make autonomous exploration feel practical, polished, and ready for real-world use.
 
@@ -163,14 +172,29 @@ a formatted citation.
 
 General:
 
-```text
-> Güler, M., & Uslu, E. (2026). frontier_exploration_ros2: An Integrated Framework for Efficient Autonomous Exploration in Unknown Environments [Computer software]. https://doi.org/10.5281/zenodo.22964253
+```bibtex
+@software{guler2026frontier,
+  author    = {G{\"u}ler, Mert},
+  title     = {frontier\_exploration\_ros2: An Integrated Framework for Efficient Autonomous Exploration in Unknown Environments},
+  year      = {2026},
+  publisher = {Zenodo},
+  doi       = {10.5281/zenodo.22964253},
+  url       = {https://doi.org/10.5281/zenodo.22964253}
+}
 ```
 
 Specific Version:
 
-```text
-Güler, M., & Uslu, E. (2026). frontier_exploration_ros2: An Integrated Framework for Efficient Autonomous Exploration in Unknown Environments (Version 1.6.2) [Computer software]. https://doi.org/10.5281/zenodo.22964254
+```bibtex
+@software{guler2026frontier_v162,
+  author    = {G{\"u}ler, Mert},
+  title     = {frontier\_exploration\_ros2: An Integrated Framework for Efficient Autonomous Exploration in Unknown Environments},
+  version   = {1.6.2},
+  year      = {2026},
+  publisher = {Zenodo},
+  doi       = {10.5281/zenodo.22964254},
+  url       = {https://doi.org/10.5281/zenodo.22964254}
+}
 ```
 
 ## Research Basis
